@@ -1,0 +1,59 @@
+<main>
+  <div class="main-container">
+    <chat-main-nav></chat-main-nav>
+    <div class="conversation-container">
+
+      <mat-toolbar color="primary" class="mat-elevation-z4">
+        <span>Chat App</span>
+      </mat-toolbar>
+
+      <chat-messages-list></chat-messages-list>
+
+      <div class="chat-right">
+        <div class="chat-messages">
+
+          <div class="chat-msg">
+            <chat-msg-avatar avatar="https://a.rsg.sc/s/RDR2/n/rdr2_molly_oshea_256x256.png"></chat-msg-avatar>
+            <div class="chat-post">Hello from sidenav</div>
+            <div class="chat-msg-username">Olcay Usta</div>
+          </div>
+
+          <div class="chat-msg">
+            <chat-msg-avatar avatar="https://a.rsg.sc/s/RDR2/n/rdr2_molly_oshea_256x256.png"></chat-msg-avatar>
+            <div class="chat-post">Hello from sidenav</div>
+            <div class="chat-msg-username">Olcay Usta</div>
+          </div>
+
+          <div class="chat-msg">
+            <chat-msg-avatar avatar="https://a.rsg.sc/s/GTAVCAnniversary/n/GTAVC42.png"></chat-msg-avatar>
+
+            <div class="chat-post">It's cool</div>
+            <div class="chat-msg-username">Olcay Usta</div>
+          </div>
+
+          <div class="chat-msg">
+            <chat-msg-avatar avatar="https://a.rsg.sc/s/RDR2/n/rdr2_abigail_roberts_256x256.png"></chat-msg-avatar>
+            <div class="chat-post">Yeah, I fuck you</div>
+            <div class="chat-msg-username">Abigail Roberts</div>
+          </div>
+
+          <div class="chat-msg" *ngFor="let msg of messages">
+            <div class="img-back">
+              <img class="chat-msg-avatar" src="{{msg.user.picture}}" alt="{{msg.user.displayName}}">
+            </div>
+            <div class="flex-cl">
+              <div class="chat-post">{{msg.content}}</div>
+              <div class="chat-msg-username">{{msg.user.displayName}}</div>
+            </div>
+          </div>
+
+        </div>
+        <div class="chat-form">
+        <textarea [formControl]="msgControl" placeholder="Type a message..." cdkTextareaAutosize
+                  [cdkAutosizeMinRows]="1" [cdkAutosizeMaxRows]="8" (keydown.enter)="send($event)"></textarea>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</main>

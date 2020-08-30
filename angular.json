@@ -7,12 +7,14 @@
       "projectType": "application",
       "schematics": {
         "@schematics/angular:component": {
-          "style": "scss"
+          "style": "scss",
+          "changeDetection": "OnPush",
+          "displayBlock": true
         }
       },
       "root": "",
       "sourceRoot": "src",
-      "prefix": "app",
+      "prefix": "chat",
       "architect": {
         "build": {
           "builder": "@angular-devkit/build-angular:browser",
@@ -123,6 +125,10 @@
           }
         }
       }
-    }},
-  "defaultProject": "chat-app"
+    }
+  },
+  "defaultProject": "chat-app",
+  "cli": {
+    "analytics": "356de5c1-ec30-4665-a9cb-fea8164fc451"
+  }
 }
