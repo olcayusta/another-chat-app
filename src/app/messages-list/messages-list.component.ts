@@ -1,4 +1,4 @@
-import { Component, OnInit, ChangeDetectionStrategy } from '@angular/core';
+import {Component, OnInit, ChangeDetectionStrategy} from '@angular/core';
 
 @Component({
   selector: 'chat-messages-list',
@@ -8,7 +8,8 @@ import { Component, OnInit, ChangeDetectionStrategy } from '@angular/core';
 })
 export class MessagesListComponent implements OnInit {
 
-  constructor() { }
+  constructor() {
+  }
 
   ngOnInit(): void {
   }

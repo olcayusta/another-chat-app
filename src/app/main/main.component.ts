@@ -1,7 +1,7 @@
-import { ChangeDetectionStrategy, Component, OnInit } from '@angular/core';
-import { Message } from '../shared/models/message.model';
-import { FormControl } from '@angular/forms';
-import { SocketService } from '../shared/services/socket.service';
+import {ChangeDetectionStrategy, Component, OnInit} from '@angular/core';
+import {Message} from '../shared/models/message.model';
+import {FormControl} from '@angular/forms';
+import {SocketService} from '../shared/services/socket.service';
 
 @Component({
   selector: 'chat-main',
@@ -15,7 +15,8 @@ export class MainComponent implements OnInit {
 
   constructor(
     private socketService: SocketService
-  ) { }
+  ) {
+  }
 
   ngOnInit(): void {
   }
